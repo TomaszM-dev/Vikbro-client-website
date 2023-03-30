@@ -1,0 +1,15 @@
+.header {
+  align-self: center;
+
+  &__content {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__btn {
+    &:hover {
+      background-color: $color-primary-light-1;
+      color: $color-primary;
+    }
+  }
+}

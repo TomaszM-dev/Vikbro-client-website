@@ -1,0 +1,54 @@
+// HEADINGS
+
+.heading-h1 {
+  font-size: 6.2rem;
+  text-transform: uppercase;
+}
+.heading-h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.heading-h3 {
+}
+.heading-h4 {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+.heading-h5 {
+}
+
+// MARGINS
+
+.mg-sm {
+  margin-bottom: 1rem;
+}
+.mg-mm {
+  margin-bottom: 3rem;
+}
+.mg-lm {
+  margin-bottom: 9rem;
+}
+.mg-hm {
+  margin-bottom: 12rem;
+}
+
+// TEXT ALIGN
+
+.al-s {
+  text-align: start;
+}
+.al-c {
+  text-align: center;
+}
+.al-e {
+  text-align: end;
+}
+
+// BACKGROUND COLORS
+
+.bg-light {
+  background-color: $bg-color-light;
+}
+.bg-dark {
+  background-color: $bg-color-dark;
+}
