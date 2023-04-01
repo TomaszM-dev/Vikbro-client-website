@@ -1,0 +1,75 @@
+.aboutus {
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    max-width: 100rem;
+    margin: 0 auto;
+    text-align: start;
+  }
+  &__box {
+    position: relative;
+
+    margin: 0 1.2rem;
+    width: 34%;
+    color: $primary-color;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+
+    &-image {
+      background-color: #262626;
+      border-radius: 0.5rem;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      border-radius: 0.5rem;
+      transition: opacity 0.3s;
+    }
+
+    &-image img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      border-radius: 0.5rem;
+      transition: opacity 0.3s;
+    }
+
+    &-about {
+      position: absolute;
+      bottom: 0rem;
+      padding: 0 2rem;
+      text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+
+    &-name {
+      font-size: 1.5rem;
+    }
+    &-role {
+      color: $color-primary-light-1;
+      font-size: 3rem;
+    }
+    &-paragraph {
+      font-size: 1.3rem;
+    }
+    &-btn {
+      @extend %btn;
+      padding: 0.5rem 3rem;
+      background-color: $color-primary-light-1;
+      color: $color-primary;
+    }
+
+    &:hover &-about {
+      bottom: 5rem;
+      opacity: 1;
+      visibility: visible;
+    }
+    &:hover &-image img {
+      opacity: 0.5;
+    }
+  }
+}

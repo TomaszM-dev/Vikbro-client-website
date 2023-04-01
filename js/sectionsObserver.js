@@ -5,7 +5,7 @@ export const sectionObserver = function () {
     const [entry] = entries;
 
     if (entry.isIntersecting === true) {
-      entry.target.classList.remove("section-hidden");
+      entry.target.classList.remove("hidden");
     }
   };
 

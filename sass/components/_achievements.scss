@@ -1,14 +1,43 @@
 .boxes {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
 
   &__box {
-    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: $shadow;
+    width: 20%;
+    height: 30rem;
+    margin: 0 2rem;
+    border-radius: 5px;
+    // opacity: 0.9;
+    background-color: $bg-color;
+    transition: all 0.3s;
+    transform: translate(0rem);
 
+    &:first-child {
+      margin-left: 5rem;
+    }
     i {
       color: $primary-color;
       font-size: 6rem;
+      transition: all, 0.3s;
+    }
+
+    &:hover {
+      transform: translateY(-2rem) scale(1.05);
+
+      i {
+        transform: scale(1.2);
+        color: #c2b194;
+      }
+
+      .boxes__about {
+        color: $color-grey-light-1;
+      }
     }
   }
 
@@ -21,6 +50,6 @@
 
   &__numbers {
     color: $primary-color;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }

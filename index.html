@@ -27,10 +27,10 @@
     ></script>
   </head>
   <body>
-    <section id="home" class="section-home mg-lm">
+    <section id="home" class="section section-home mg-lm">
       <div class="navbar navbar__top">
         <div class="navbar__links">
-          <a href="#home" class="navbar__link active">Home</a>
+          <a href="about.html" class="navbar__link active">Home</a>
           <a href="#about" class="navbar__link">About</a>
           <a href="#opinions" class="navbar__link">Opinie</a>
         </div>
@@ -43,17 +43,19 @@
       </div>
       <div class="header">
         <div class="header__content">
-          <h1 class="heading-h1 mg-sm">Lorem ipsum dolor sit.</h1>
-          <h4 class="heading-h4 mg-mm">
-            I specialize in html css sass js and wasting time on bs
+          <h1 class="heading-h1 mg-sm heading-primary">
+            <span class="heading-primary__main"> Lorem ipsum dolor sit. </span>
+          </h1>
+          <h4 class="heading-h4 mg-mm heading-secondary">
+            <span class="heading-secondary__sub"
+              >I specialize in html css sass js and wasting time on bs</span
+            >
           </h4>
-          <button href="#work" class="btn header__btn">
-            Zobacz Nasze Prace
-          </button>
+          <button href="#work" class="btn-main">Zobacz Nasze Prace</button>
         </div>
       </div>
     </section>
-    <section id="work" class="section-work section-hidden mg-mm">
+    <section id="work" class="section section-work hidden mg-mm">
       <div class="info al-c">
         <h3 class="heading-h2 mg-sm">Nasze projekty</h3>
         <div class="info__border"></div>
@@ -70,7 +72,8 @@
           <div class="item-text">
             <div class="item-text-wrap">
               <p class="item-text-category">Projekt</p>
-              <h2 class="item-text-title">Altana</h2>
+              <h2 class="item-text-title mg">Altana</h2>
+              <button href="#popup" class="item-text-btn">See more</button>
             </div>
           </div>
         </div>
@@ -98,7 +101,7 @@
         </div>
         <div class="item item-4">
           <div class="item-image">
-            <img src="./img/work/domek2fin.jpeg" alt="" />
+            <img href src="./img/work/domek2fin.jpeg" alt="" />
           </div>
           <div class="item-text">
             <div class="item-text-wrap">
@@ -131,31 +134,32 @@
         </div>
       </div>
     </section>
-    <section class="section-achievements mg-lm">
+    <section class="section-achievements section hidden mg-lm">
+      <div class="blur"></div>
       <div class="boxes">
-        <div class="boxes__box bg-light">
+        <div class="boxes__box">
           <i class="fas fa-users fa-4x mg-sm"></i>
           <h4 class="boxes__about">Clients</h4>
           <div class="boxes__numbers" data-value="100"></div>
         </div>
-        <div class="boxes__box bg-dark">
+        <div class="boxes__box">
           <i class="fas fa-award fa-4x mg-sm"></i>
           <h4 class="boxes__about">Awards</h4>
           <div class="boxes__numbers" data-value="3"></div>
         </div>
-        <div class="boxes__box bg-light">
+        <div class="boxes__box">
           <i class="fas fa-hourglass fa-4x mg-sm"></i>
           <h4 class="boxes__about">Hours Worked</h4>
           <div class="boxes__numbers" data-value="3500"></div>
         </div>
-        <div class="boxes__box bg-dark">
+        <div class="boxes__box">
           <i class="fas fa-code-branch fa-4x mg-sm"></i>
           <h4 class="boxes__about">Projects Completed</h4>
           <div class="boxes__numbers" data-value="135"></div>
         </div>
       </div>
     </section>
-    <section class="section-realization">
+    <section class="section-operations section hidden mg-lm">
       <div class="info al-c">
         <h3 class="heading-h2 mg-sm">Jak przebiega wspolpraca</h3>
         <div class="info__border"></div>
@@ -233,5 +237,347 @@
         </div>
       </div>
     </section>
+    <section id="my" class="section section-aboutus hidden mg-hm">
+      <div class="info al-c">
+        <h3 class="heading-h2 mg-sm">Pare slow o nas</h3>
+        <div class="info__border"></div>
+        <p class="info__paragraph mg-lm">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, neque?
+          esa blue kmisd aesra Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+      <div class="aboutus__container">
+        <div class="aboutus__box aboutus__box-2" data-tilt>
+          <div class="aboutus__box-image">
+            <img src="./img/people/pitek.jpeg" alt="" />
+          </div>
+          <div class="aboutus__box-about">
+            <h3 class="aboutus__box-name">John Stanley</h3>
+            <h4 class="aboutus__box-role">Maler</h4>
+            <p class="aboutus__box-paragraph mg-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate quis animi, odit facere sint ipsum?
+            </p>
+            <button href="" class="aboutus__box-btn">Email</button>
+          </div>
+        </div>
+        <div class="aboutus__box aboutus__box-1" data-tilt>
+          <div class="aboutus__box-image">
+            <img src="./img/people/szef.png" alt="" />
+          </div>
+          <div class="aboutus__box-about">
+            <h3 class="aboutus__box-name">John Stanley</h3>
+            <h4 class="aboutus__box-role">Maler</h4>
+            <p class="aboutus__box-paragraph mg-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate quis animi, odit facere sint ipsum?
+            </p>
+            <button href="" class="aboutus__box-btn">Email</button>
+          </div>
+        </div>
+        <div class="aboutus__box aboutus__box-3" data-tilt>
+          <div class="aboutus__box-image">
+            <img src="./img/people/graba-3.png" alt="" />
+          </div>
+          <div class="aboutus__box-about">
+            <h3 class="aboutus__box-name">John Stanley</h3>
+            <h4 class="aboutus__box-role">Maler</h4>
+            <p class="aboutus__box-paragraph mg-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate quis animi, odit facere sint ipsum?
+            </p>
+            <button href="" class="aboutus__box-btn">Email</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="opinions" class="opinie section hidden mg-hm">
+      <div class="info al-c">
+        <h3 class="heading-h2 mg-sm">Opinie naszych klientow</h3>
+        <div class="info__border"></div>
+        <p class="info__paragraph mg-mm">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, neque?
+          esa blue kmisd aesra Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+      <div class="slider">
+        <div data-set="1" class="slide slide--1">
+          <div class="testimonial">
+            <h3 class="testimonial-header">
+              Lorem ipsum dolor sit ewefwefwefwefw 0
+            </h3>
+            <p class="testimonial-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+              necessitatibus sequi atque corrupti, magnam saepe nisi in expedita
+              iste placeat minus eaque suscipit molestiae earum doloremque
+              sapiente eius aliquam error!
+            </p>
+            <address class="testimonial__author">
+              <img
+                src="/img/people/person-2.jpg"
+                class="testimonial--photo"
+                alt=""
+              />
+              <h5 class="testimonial__name">Jacek Kowalski</h5>
+              <p class="testimonial__location">Sidzina, PL</p>
+            </address>
+          </div>
+        </div>
+        <div data-set="2" class="slide slide--2">
+          <div class="testimonial">
+            <h3 class="testimonial-header">
+              Lorem ipsum Lorem ipsum dolor sit amet. sdgedfhfddsvdsf 1
+            </h3>
+            <p class="testimonial-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+              necessitatibus sequi atque corrupti, magnam saepe nisi in expedita
+              iste placeat minus eaque suscipit molestiae earum doloremque
+              sapiente eius aliquam error!
+            </p>
+            <address class="testimonial__author">
+              <img
+                src="/img/people/person-2.jpg"
+                class="testimonial--photo"
+                alt=""
+              />
+              <h5 class="testimonial__name">Jacek Kowalski</h5>
+              <p class="testimonial__location">Sidzina, PL</p>
+            </address>
+          </div>
+        </div>
+        <div data-set="3" class="slide slide--3">
+          <div class="testimonial">
+            <h3 class="testimonial-header">
+              Lorem ipsum dolor sit. qwdqwdfqfaefsdf 2
+            </h3>
+            <p class="testimonial-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+              necessitatibus sequi atque corrupti, magnam saepe nisi in expedita
+              iste placeat minus eaque suscipit molestiae earum doloremque
+              sapiente eius aliquam error!
+            </p>
+            <address class="testimonial__author">
+              <img
+                src="/img/people/person-2.jpg"
+                class="testimonial--photo"
+                alt=""
+              />
+              <h5 class="testimonial__name">Jacek Kowalski</h5>
+              <p class="testimonial__location">Sidzina, PL</p>
+            </address>
+          </div>
+        </div>
+
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+
+        <div class="dots"></div>
+      </div>
+    </section>
+    <section class="section-footer section hidden">
+      <div class="footer__motto mg-sm">
+        <img src="/img/other/logo-3.png" alt="" class="footer__logo mg-sm" />
+        <h3 class="footer__heading heading-h4 mg-sm">Lorem ipsum dolor sit.</h3>
+        <div class="border__vertical"></div>
+      </div>
+      <div class="footer__container mg-mm">
+        <div class="footer__items">
+          <h5 class="heading-h5 mg-mm">navigation</h5>
+          <ul>
+            <li class="footer__item">Vision</li>
+            <li class="footer__item">Essa</li>
+            <li class="footer__item">Ambition</li>
+            <li class="footer__item">Deta</li>
+            <li class="footer__item">Baliz</li>
+          </ul>
+        </div>
+        <div class="footer__email mg-sm">
+          <span class="footer__send mg-mm"> Lorem ipsum dolor sit. </span>
+          <form action="#" class="footer__form mg-mm">
+            <div class="footer__form-group">
+              <input
+                type="text"
+                class="footer__form-input"
+                placeholder="Full Name"
+                id="name"
+              />
+              <label for="name" class="footer__form-label"></label>
+
+              <input
+                type="email"
+                class="footer__form-input"
+                placeholder="Email"
+                id="email"
+              />
+              <label for="email" class="footer__form-label"></label>
+            </div>
+            <button type="submit" class="footer__form-btn btn btn-footer">
+              Submit
+            </button>
+          </form>
+          <div class="footer__privacy">
+            <span>Privacy Policy </span>
+            <span>Due diligance checklist</span>
+          </div>
+        </div>
+        <div class="footer__items">
+          <h5 class="heading-h5 mg-mm">navigation</h5>
+          <ul>
+            <li class="footer__item">Vision</li>
+            <li class="footer__item">Essa</li>
+            <li class="footer__item">Ambition</li>
+            <li class="footer__item">Deta</li>
+            <li class="footer__item">Baliz</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyrights">
+        <span>&#169; 2023 - VIKBRO</span>
+        <span>SITE BY TM-DEV</span>
+      </div>
+    </section>
+    <div class="popup popup__close" id="popup">
+      <div class="popup__content">
+        <a href="#work" class="popup__close-btn">x</a>
+        <h2 class="heading-h2 popup__content-heading mg-mm al-c">
+          Lorem ipsum dolor sit amet.
+        </h2>
+        <div class="popup__box">
+          <div data-set="0" class="content__left content__left-box0">
+            <div class="content__left-p1 mg-lm">
+              <h4 class="content__headline mg-sm">GLOWNY CONTENT OPIS ITP</h4>
+              <p>
+                TU BEDZIE ZNAJDOWAL SIE GLOWNY OPIS CO TO ZA PROJEKT ITP ITD,
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum,
+                nesciunt.
+              </p>
+            </div>
+            <!-- <div class="content__left-p2">
+              <h4 class="content__headline mg-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </h4>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Dolorum minima voluptates, fugiat deleniti aliquam blanditiis
+                explicabo cupiditate soluta reiciendis libero!
+              </p>
+            </div> -->
+          </div>
+          <div
+            data-set="1"
+            class="content__left content__left-box1 composition__display"
+          >
+            <div class="content__left-p1 mg-lm">
+              <h4 class="content__headline mg-sm">BOX 1</h4>
+              <!-- <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Dolorum minima voluptates, fugiat deleniti aliquam blanditiis
+                explicabo cupiditate soluta reiciendis libero!
+              </p> -->
+            </div>
+            <!-- <div class="content__left-p2">
+              <h4 class="content__headline mg-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </h4>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Dolorum minima voluptates, fugiat deleniti aliquam blanditiis
+                explicabo cupiditate soluta reiciendis libero!
+              </p>
+            </div> -->
+          </div>
+          <div
+            data-set="2"
+            class="content__left content__left-box2 composition__display"
+          >
+            <div class="content__left-p1 mg-lm">
+              <h4 class="content__headline mg-sm">BOX 2</h4>
+              <!-- <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Dolorum minima voluptates, fugiat deleniti aliquam blanditiis
+                explicabo cupiditate soluta reiciendis libero!
+              </p> -->
+            </div>
+            <!-- <div class="content__left-p2">
+              <h4 class="content__headline mg-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </h4>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Dolorum minima voluptates, fugiat deleniti aliquam blanditiis
+                explicabo cupiditate soluta reiciendis libero!
+              </p>
+            </div> -->
+          </div>
+          <div
+            data-set="3"
+            class="content__left content__left-box3 composition__display"
+          >
+            <div class="content__left-p1 mg-lm">
+              <h4 class="content__headline mg-sm">BOX 3</h4>
+              <!-- <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Dolorum minima voluptates, fugiat deleniti aliquam blanditiis
+                explicabo cupiditate soluta reiciendis libero!
+              </p> -->
+            </div>
+            <!-- <div class="content__left-p2">
+              <h4 class="content__headline mg-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </h4>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Dolorum minima voluptates, fugiat deleniti aliquam blanditiis
+                explicabo cupiditate soluta reiciendis libero!
+              </p>
+            </div> -->
+          </div>
+          <div class="composition">
+            <div
+              data-set="1"
+              class="composition__photo composition__photo--p1 composition__photo-selection"
+            ></div>
+            <div
+              data-set="2"
+              class="composition__photo composition__photo--p2 composition__photo-selection"
+            ></div>
+            <div
+              data-set="3"
+              class="composition__photo composition__photo--p3 composition__photo-selection"
+            ></div>
+          </div>
+          <button
+            class="composition__btn composition__btn-left composition__display"
+          >
+            &larr;
+          </button>
+          <button
+            class="composition__btn composition__btn-right composition__display"
+          >
+            &rarr;
+          </button>
+          <button
+            class="composition__btn composition__display composition__btn-return"
+          >
+            Return
+          </button>
+          <!-- <div class="composition__btn-cta">
+            <span
+              class="composition__btn-arrow composition__btn-primera composition__btn-next"
+            ></span>
+            <span
+              class="composition__btn-arrow composition__btn-segunda composition__btn-next"
+            ></span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <script type="module" src="js/controller.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/tilt.js"></script>
   </body>
 </html>

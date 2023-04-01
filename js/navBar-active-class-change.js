@@ -1,10 +1,8 @@
 "use strict";
 
-const navLinks = document.querySelector(".links");
 const navBar = document.querySelector(".navbar");
-const navLink = document.querySelectorAll(".link");
-const display = document.querySelector(".display");
-const btnWork = document.querySelector(".btn-work");
+const navLink = document.querySelectorAll("navbar__link");
+const btnWork = document.querySelector(".btn-main");
 
 export const navBarFunctions = function () {
   navBar.addEventListener("click", function (e) {
@@ -38,9 +36,9 @@ export const navBarFunctions = function () {
 
   window.onscroll = function () {
     if (window.pageYOffset > 110) {
-      navBar.classList.remove("top");
+      navBar.classList.remove("navbar__top");
     } else {
-      navBar.classList.add("top");
+      navBar.classList.add("navbar__top");
       scrolled = false;
     }
   };

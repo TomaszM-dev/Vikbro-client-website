@@ -9,11 +9,29 @@
     ),
     url(/img/other/showcase-3.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
 
   display: flex;
   justify-content: center;
 }
 
 .section-achievements {
+  width: 100%;
+  padding: 10rem 0;
+
+  z-index: 10;
+  & > * {
+    z-index: 11;
+  }
+}
+
+.section {
+  transition: all 1s;
+}
+
+.section-footer {
+  background-color: #3b372d;
+
+  display: flex;
+  flex-direction: column;
 }

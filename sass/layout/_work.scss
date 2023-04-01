@@ -103,4 +103,18 @@
     opacity: 0.7;
     margin: 0;
   }
+
+  &-text-btn {
+    @extend %btn;
+
+    margin-top: 3.5rem;
+    color: $color-primary;
+
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: $color-primary-light-1;
+    @extend %btn;
+    font-size: 4rem;
+    padding: 1.5rem 4.5rem;
+  }
 }

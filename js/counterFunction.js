@@ -1,7 +1,7 @@
 //  COUNTER FUNCTION
 
-const numbers = document.querySelectorAll(".numbers");
-const containerGrid1 = document.querySelector(".container-grid--1");
+const numbers = document.querySelectorAll(".boxes__numbers");
+const containerGrid1 = document.querySelector(".boxes");
 
 export const counterFunction = function () {
   const realizationCallBack = function (entries) {
@@ -15,10 +15,7 @@ export const counterFunction = function () {
           let startTimestamp = null;
           const step = (timestamp) => {
             if (!startTimestamp) startTimestamp = timestamp;
-            const progress = Math.min(
-              (timestamp - startTimestamp) / duration,
-              1
-            );
+            const progress = Math.min((timestamp - startTimestamp) / duration);
             obj.innerHTML = Math.floor(progress * (end - start) + start);
             if (progress < 1) {
               window.requestAnimationFrame(step);

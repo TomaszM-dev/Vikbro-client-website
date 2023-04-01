@@ -1,0 +1,283 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  color: black;
+  z-index: 9999;
+  overflow: scroll;
+
+  &__close {
+    visibility: hidden;
+    display: none;
+    transition: all 1s;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__open {
+    display: block;
+    visibility: visible;
+    transition: all 1s;
+  }
+
+  .scale__open {
+    animation: scaleOpen 1s;
+  }
+
+  .scale__close {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    animation: scaleClose 1s;
+  }
+
+  &__close-btn {
+    color: $icons-color;
+    position: absolute;
+    top: 3.5rem;
+    right: 3.5rem;
+    font-size: 3.5rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+    line-height: 1;
+    animation: moveInBottom 0.5s ease-out 0.5s;
+    animation-fill-mode: backwards;
+  }
+
+  @supports (-webkit-backdrop-filter: blur(10px)) or
+    (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, 0.3);
+  }
+
+  &__content {
+    @include absCenter;
+    height: 50rem;
+
+    color: $color-grey-dark;
+    width: 85%;
+    background-color: #f4f4f4;
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    border-radius: 3px;
+
+    overflow: hidden;
+    opacity: 0;
+
+    transition: all 0.5s 0.2s;
+
+    &-heading {
+      margin-top: 3rem;
+      margin: 3rem 10rem;
+      font-weight: 700;
+
+      color: $color-primary-light-1;
+    }
+  }
+
+  &__box {
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    padding: 2rem 3rem;
+  }
+
+  .content {
+    &__left {
+      animation: moveInBottom 0.5s ease-out 0.2s;
+      animation-fill-mode: backwards;
+      font-size: 2rem;
+      flex: 0 0 50%;
+      padding: 0 2rem;
+      &-p1 {
+      }
+      &-p2 {
+      }
+    }
+
+    &__headline {
+      font-size: 3.6rem;
+      text-align: center;
+    }
+
+    //////////////////////////////////
+  }
+  &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  // popup content
+
+  .composition {
+    flex: 0 0 50%;
+    z-index: 1000;
+    position: relative;
+    align-items: center;
+    height: 100%;
+    animation: moveInBottom 0.5s ease-out 0.2s;
+    animation-fill-mode: backwards;
+
+    // to wyrzucamy ze wszystkich
+    &__photo-selection {
+      position: absolute !important;
+      animation: moveInBottom 0.5s ease-out 0.5s;
+      animation-fill-mode: backwards;
+    }
+
+    // dodajemy do tylko clicka
+    &__photo-height {
+      height: 90%;
+      width: 80%;
+      animation: moveInBottom 0.5s ease-out 0.5s;
+      animation-fill-mode: backwards;
+    }
+
+    // dodajemy tylko do pozostalych
+    &__display {
+      display: none !important;
+    }
+
+    &__btn {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+
+      border: none;
+      background: $color-primary-light-1;
+      font-family: inherit;
+      color: white;
+      border-radius: 50%;
+      box-shadow: $shadow;
+      height: 6rem;
+      width: 6rem;
+      font-size: 3.25rem;
+      font-weight: 200;
+      cursor: pointer;
+    }
+
+    &__btn-left {
+      left: 6%;
+      transform: translate(-50%, -50%);
+      animation: moveInRightTranslate 0.5s ease-out 0.4s;
+      animation-fill-mode: backwards;
+      z-index: 1000;
+      transition: all 1s;
+    }
+
+    &__btn-right {
+      z-index: 1000;
+      right: 6%;
+      transform: translate(50%, -50%);
+      animation: moveInLeftTranslate 0.5s ease-out 0.4s;
+      animation-fill-mode: backwards;
+    }
+
+    &__btn-return {
+      border-radius: 2rem;
+      width: 20rem;
+      height: 4.2rem;
+      font-size: 2.6rem;
+      top: 88%;
+      left: 48rem;
+      color: $icons-color;
+      font-weight: 400;
+      border: 1px solid $icons-color;
+      background-color: #f4f4f4;
+      animation: moveInBottom 0.5s ease-out 0.2s;
+      animation-fill-mode: backwards;
+      transition: all 0.5s;
+      &:hover {
+        background-color: $color-primary-light-1;
+        color: $color-primary;
+      }
+    }
+
+    &__photo {
+      animation: moveInBottom 0.5s ease-out 0.2s;
+      animation-fill-mode: backwards;
+      padding: 9rem 13rem;
+      background-color: aqua;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.8);
+      border-radius: 1px;
+      z-index: 10;
+      transition: all 0.2s;
+      outline-offset: 1.3rem;
+      display: block;
+
+      &:active {
+        animation: scale 0.5s ease-out 0.2s;
+        animation-fill-mode: backwards;
+      }
+
+      &--p1 {
+        right: 5rem;
+        top: 7rem;
+        background-image: url("/img/work/dom.jpeg");
+        background-size: cover;
+      }
+
+      &--p2 {
+        right: 18rem;
+        top: 12rem;
+        z-index: 11;
+        background-image: url("/img/work/altana.jpeg");
+        background-size: cover;
+      }
+
+      &--p3 {
+        right: 28rem;
+        top: 2rem;
+        background-image: url("/img/work/domek2.jpeg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      &:hover {
+        outline: 1rem solid $color-primary-light-1;
+        transform: scale(1.05) translateY(-0.5rem);
+        box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+        z-index: 20;
+      }
+    }
+
+    &:hover &__photo:not(:hover) {
+      transform: scale(0.95);
+    }
+  }
+}
+
+// &__btn-left {
+//   position: absolute;
+//   border: 2px solid #fff;
+//   width: 5.5rem;
+//   height: 5.5rem;
+//   border-radius: 100%;
+// }
+
+// &__btn-cta {
+//   width: 100%;
+//   cursor: pointer;
+//   position: absolute;
+// }
+
+// &__btn-arrow {
+//   position: absolute;
+//   bottom: 1rem;
+//   margin-left: 0px;
+//   width: 12px;
+//   height: 12px;
+//   background-size: contain;
+//   top: 15px;
+// }
+
+// &__btn-next {
+//   background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+// }
+
+// &__btn-segunda {
+//   margin-left: 8px;
+// }

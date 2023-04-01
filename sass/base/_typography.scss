@@ -1,0 +1,37 @@
+.paragraph {
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  font-weight: 300;
+  color: #eee;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.heading-primary {
+  &__main {
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    display: block;
+    font-size: 7rem;
+    font-weight: 600;
+  }
+}
+
+.heading-secondary {
+  &__sub {
+    position: relative;
+    display: block;
+    font-size: 3rem;
+    font-weight: 400;
+
+    animation: moveInRight 1s ease-out;
+  }
+}
+
+.border__vertical {
+  width: 2px;
+  height: 3rem;
+  background-color: $color-primary-light-1;
+  // position: absolute;
+}
