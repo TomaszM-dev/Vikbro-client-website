@@ -10,12 +10,13 @@ const compositionBtnLeft = document.querySelector(".composition__btn-left");
 const compositionBtnRight = document.querySelector(".composition__btn-right");
 const content = document.querySelectorAll(".content__left");
 const compositionBntReturn = document.querySelector(".composition__btn-return");
+const compositionContent = document.querySelector(".content__headline");
 
 export const workFunction = function () {
   // pierwszy slide
   let curSlide = 1;
   // max slidow
-  let maxSlide = compositionPhoto.length;
+  const maxSlide = 3;
 
   // otwarcie popupa
   const initState = function () {
@@ -41,8 +42,8 @@ export const workFunction = function () {
 
     // ustawienia poczatkowe zdjec
     compositionPhoto.forEach((c) => {
-      c.classList.remove("composition__display");
       c.classList.remove("composition__photo-height");
+      c.classList.remove("composition__display");
       c.classList.add("composition__photo-selection");
     });
 
@@ -72,7 +73,7 @@ export const workFunction = function () {
   // previous slide
   const prevSlide = function () {
     if (curSlide === 1) {
-      curSlide = 3;
+      curSlide = Number(maxSlide);
     } else {
       curSlide--;
     }
@@ -117,17 +118,16 @@ export const workFunction = function () {
   // btn left
   compositionBtnLeft.addEventListener("click", function (e) {
     e.preventDefault();
-    console.log(curSlide);
-    compositionSlider();
     prevSlide();
+
+    compositionSlider();
   });
 
   // btn right
   compositionBtnRight.addEventListener("click", function (e) {
-    console.log(curSlide);
     e.preventDefault();
-    compositionSlider();
     nextSlide();
+    compositionSlider();
   });
 
   // btn return
@@ -154,7 +154,7 @@ export const workFunction = function () {
 
     if (!clicked) return;
 
-    console.log(clicked.dataset.set);
+    curSlide = Number(clicked.dataset.set);
 
     // 1. DODAC DISPLY NONE DO STARTERA
     contentStarterBox.classList.add("composition__display");
@@ -183,3 +183,17 @@ export const workFunction = function () {
     });
   });
 };
+
+// to do
+
+/* 
+  1. klikajac na dany projekt (item work) bedzie sie wyswietlal do niego adekwatny popup czyli np popup1 === item1
+
+  2. 
+
+
+
+
+
+
+*/

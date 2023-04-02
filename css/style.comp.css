@@ -768,6 +768,9 @@ ul {
     line-height: 1;
     animation: moveInBottom 0.5s ease-out 0.5s;
     animation-fill-mode: backwards; }
+    .popup__close-btn:hover {
+      transform: scale(1.5);
+      color: #c2b194; }
   @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
     .popup {
       -webkit-backdrop-filter: blur(10px);

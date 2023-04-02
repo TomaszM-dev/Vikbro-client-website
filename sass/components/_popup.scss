@@ -45,6 +45,14 @@
     line-height: 1;
     animation: moveInBottom 0.5s ease-out 0.5s;
     animation-fill-mode: backwards;
+
+    &:active {
+    }
+
+    &:hover {
+      transform: scale(1.5);
+      color: $color-primary-light-1;
+    }
   }
 
   @supports (-webkit-backdrop-filter: blur(10px)) or
