@@ -587,6 +587,9 @@ ul {
   display: flex;
   justify-content: center;
   z-index: 100; }
+  @media only screen and (max-width: 56.25em) {
+    .boxes {
+      flex-wrap: wrap; } }
   @media only screen and (max-width: 37.5em) {
     .boxes {
       flex-wrap: wrap;
@@ -607,6 +610,10 @@ ul {
     background-color: #4b4538;
     transition: all 0.3s;
     transform: translate(0rem); }
+    @media only screen and (max-width: 56.25em) {
+      .boxes__box {
+        width: 40%;
+        margin: 1rem 1rem; } }
     @media only screen and (max-width: 37.5em) {
       .boxes__box {
         width: 40%;
@@ -726,6 +733,10 @@ ul {
   max-width: 114rem;
   margin: 0 auto;
   text-align: start; }
+  @media only screen and (max-width: 37.5em) {
+    .aboutus__container {
+      flex-direction: column;
+      align-items: center; } }
   @media only screen and (max-width: 25em) {
     .aboutus__container {
       flex-direction: column;
@@ -739,6 +750,10 @@ ul {
   color: #fffefb;
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .aboutus__box {
+      width: 50%;
+      margin-bottom: 2rem; } }
   @media only screen and (max-width: 25em) {
     .aboutus__box {
       width: 80%;
@@ -752,6 +767,9 @@ ul {
     opacity: 0.8;
     border-radius: 0.5rem;
     transition: opacity 0.3s; }
+    @media only screen and (max-width: 37.5em) {
+      .aboutus__box-image {
+        height: 45rem; } }
     @media only screen and (max-width: 25em) {
       .aboutus__box-image {
         height: 40rem; } }

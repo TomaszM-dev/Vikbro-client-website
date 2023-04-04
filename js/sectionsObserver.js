@@ -20,7 +20,7 @@ export const sectionObserver = function () {
 
   const sectionOptions = {
     root: null,
-    threshold: 0.9,
+    threshold: 0.1,
   };
 
   const sectionObserver = new IntersectionObserver(

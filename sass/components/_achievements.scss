@@ -4,6 +4,10 @@
   justify-content: center;
   z-index: 100;
 
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+  }
+
   @include respond(phone) {
     flex-wrap: wrap;
     justify-items: center;
@@ -27,6 +31,11 @@
     background-color: $bg-color;
     transition: all 0.3s;
     transform: translate(0rem);
+
+    @include respond(tab-port) {
+      width: 40%;
+      margin: 1rem 1rem;
+    }
 
     @include respond(phone) {
       width: 40%;
