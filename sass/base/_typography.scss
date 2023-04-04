@@ -15,6 +15,10 @@
     display: block;
     font-size: 5rem;
     font-weight: 600;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -24,6 +28,11 @@
     display: block;
     font-size: 3rem;
     font-weight: 400;
+
+    @include respond(phone) {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+    }
 
     animation: moveInRight 1s ease-out;
   }

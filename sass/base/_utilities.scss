@@ -5,8 +5,15 @@
   font-weight: 600;
   text-transform: uppercase;
   color: $color-primary-light-1;
+
+  @include respond(phone) {
+    font-size: 4rem;
+  }
 }
 .heading-h2 {
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
   font-size: 3.4rem;
   text-transform: uppercase;
 
@@ -26,6 +33,10 @@
   }
   font-size: 2.4rem;
   font-weight: 400;
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
 }
 .heading-h5 {
   text-transform: uppercase;

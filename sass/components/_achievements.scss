@@ -4,6 +4,16 @@
   justify-content: center;
   z-index: 100;
 
+  @include respond(phone) {
+    flex-wrap: wrap;
+    justify-items: center;
+  }
+
+  @include respond(iphone) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__box {
     display: flex;
     flex-direction: column;
@@ -13,14 +23,26 @@
     height: 30rem;
     margin: 0 2rem;
     border-radius: 5px;
-    // opacity: 0.9;
+
     background-color: $bg-color;
     transition: all 0.3s;
     transform: translate(0rem);
 
-    &:first-child {
-      margin-left: 5rem;
+    @include respond(phone) {
+      width: 40%;
+
+      margin: 1rem 1rem;
+
+      &:first-child {
+        margin-left: 1rem;
+      }
     }
+
+    @include respond(iphone) {
+      width: 70%;
+      margin-bottom: 2rem;
+    }
+
     i {
       color: $primary-color;
       font-size: 6rem;

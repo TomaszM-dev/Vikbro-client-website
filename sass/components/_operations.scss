@@ -6,11 +6,19 @@
     color: $primary-color;
     transition: transform 1s, opacity 1s;
 
+    @include respond(phone) {
+      max-width: 65rem;
+      margin-top: 10rem;
+    }
+
     &__tab-container {
       display: flex;
       justify-content: center;
       animation: moveInBottom 0.5s ease-out 0.2s;
       animation-fill-mode: backwards;
+
+      @include respond(phone) {
+      }
 
       .operations__tab {
         margin: 0 2rem 0 0.8rem;
@@ -60,6 +68,13 @@
         column-gap: 3rem;
         row-gap: 0.5rem;
         column-gap: 5rem;
+
+        @include respond(iphone) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 2rem 4rem 5rem 4rem;
+        }
       }
 
       p {
@@ -72,6 +87,11 @@
       font-size: 2.8rem;
       font-weight: 600;
       align-self: center;
+
+      @include respond(iphone) {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
     }
 
     &__icon {
@@ -81,6 +101,20 @@
       height: 7rem;
       width: 7rem;
       border-radius: 50%;
+
+      @include respond(iphone) {
+        margin-top: -8rem;
+        height: 15rem;
+        width: 7rem;
+        align-self: center;
+      }
+
+      @include respond(phone) {
+        i {
+          height: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
     }
   }
 }

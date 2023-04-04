@@ -9,6 +9,10 @@
   z-index: 11;
   opacity: 0.96;
   flex-wrap: nowrap;
+
+  @include respond(iphone) {
+  }
+
   &__top {
     background: transparent;
   }
@@ -16,20 +20,41 @@
   &__image {
     height: 10rem;
     padding: 1rem;
+
+    @include respond(phone) {
+      height: 8rem;
+    }
   }
 
   &__links {
     margin: 0 3rem;
+
+    @include respond(phone) {
+      margin: 0 1rem;
+      // width: 80%;
+    }
+
+    @include respond(iphone) {
+      text-align: center;
+    }
   }
 
   &__link {
     margin: 0 3.5rem;
-    // padding: 0 2rem;
+
     display: inline-block;
     position: relative;
     font-size: 2.3rem;
     cursor: pointer;
     transition: all 250ms;
+
+    @include respond(phone) {
+      margin: 0 1.5rem;
+    }
+
+    @include respond(iphone) {
+      font-size: 1.8rem;
+    }
   }
 
   &__link::after {

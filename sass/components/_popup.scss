@@ -13,7 +13,7 @@
     visibility: hidden;
     display: none;
     transition: all 1s;
-    opacity: 1;
+    opacity: 0;
     transform: translate(-50%, -50%) scale(1);
     animation: scaleClose 1s;
   }
@@ -66,6 +66,19 @@
     @include absCenter;
     height: 50rem;
 
+    @include respond(XL-desktop) {
+      height: 60rem;
+    }
+
+    @include respond(phone) {
+      height: 60rem;
+    }
+
+    @include respond(iphone) {
+      height: 100%;
+      width: 93%;
+    }
+
     color: $color-grey-dark;
     width: 85%;
     background-color: #f4f4f4;
@@ -81,8 +94,11 @@
       margin-top: 3rem;
       margin: 3rem 10rem;
       font-weight: 700;
-
       color: $color-primary-light-1;
+
+      @include respond(iphone) {
+        margin: 1rem 10rem;
+      }
     }
   }
 
@@ -91,6 +107,10 @@
     display: flex;
     align-items: center;
     padding: 2rem 3rem;
+
+    @include respond(phone) {
+      display: block;
+    }
   }
 
   .content {
@@ -109,6 +129,10 @@
     &__headline {
       font-size: 3.6rem;
       text-align: center;
+
+      @include respond(phone) {
+        font-size: 2.5rem;
+      }
     }
 
     //////////////////////////////////
@@ -128,12 +152,23 @@
     height: 100%;
     animation: moveInBottom 0.5s ease-out 0.2s;
     animation-fill-mode: backwards;
+    transition: all 1s;
+
+    @include respond(phone) {
+      margin-top: -7rem;
+    }
 
     // to wyrzucamy ze wszystkich
     &__photo-selection {
       position: absolute !important;
       animation: moveInBottom 0.5s ease-out 0.5s;
       animation-fill-mode: backwards;
+      transition: all 1s;
+      @include respond(iphone) {
+        position: unset !important;
+        margin: 1rem auto;
+        height: 5rem !important;
+      }
     }
 
     // dodajemy do tylko clicka
@@ -142,6 +177,22 @@
       width: 80% !important;
       animation: moveInBottom 0.5s ease-out 0.5s;
       animation-fill-mode: backwards;
+      transition: all 1s;
+
+      @include respond(phone) {
+        height: 80% !important;
+        width: 60% !important;
+        position: absolute;
+        left: 11rem !important;
+        top: 2rem !important;
+      }
+
+      @include respond(iphone) {
+        transform: scaleY(1.8);
+        left: 4rem !important;
+        top: 13rem !important;
+        width: 80% !important;
+      }
     }
 
     // dodajemy tylko do pozostalych
@@ -153,7 +204,6 @@
       position: absolute;
       top: 50%;
       z-index: 10;
-
       border: none;
       background: $color-primary-light-1;
       font-family: inherit;
@@ -165,6 +215,14 @@
       font-size: 3.25rem;
       font-weight: 200;
       cursor: pointer;
+
+      @include respond(phone) {
+        top: 65%;
+      }
+
+      @include respond(iphone) {
+        top: 60%;
+      }
     }
 
     &__btn-left {
@@ -198,6 +256,13 @@
       animation: moveInBottom 0.5s ease-out 0.2s;
       animation-fill-mode: backwards;
       transition: all 0.5s;
+
+      @include respond(phone) {
+        bottom: 2rem;
+        left: 33%;
+        margin-top: 2rem;
+      }
+
       &:hover {
         background-color: $color-primary-light-1;
         color: $color-primary;
@@ -206,16 +271,19 @@
 
     &__image {
       width: 100%;
-      height: 100%;
+      height: 100% !important;
       max-width: 100%;
       display: block;
       border-radius: 5px;
+      transition: all 1s;
+
+      @include respond(phone) {
+      }
     }
     &__photo {
       animation: moveInBottom 0.5s ease-out 0.2s;
       animation-fill-mode: backwards;
       width: 55%;
-
       height: 70%;
       box-shadow: 0 1.5rem 4rem rgba($color-black, 0.8);
       border-radius: 1px;
@@ -223,6 +291,16 @@
       transition: all 0.3s;
       outline-offset: 1.3rem;
       display: block;
+
+      @include respond(tab-port) {
+        height: 60%;
+        width: 50%;
+      }
+
+      @include respond(iphone) {
+        height: 45% !important;
+        width: 60%;
+      }
 
       &:active {
         animation: scale 0.5s ease-out 0.2s;
@@ -232,12 +310,14 @@
       &--p1 {
         right: 23rem;
         top: 0rem;
+        transition: all 1s;
       }
 
       &--p2 {
         right: 1rem;
         top: 4rem;
         object-fit: cover;
+        transition: all 1s;
       }
 
       &--p3 {
@@ -263,35 +343,3 @@
     }
   }
 }
-
-// &__btn-left {
-//   position: absolute;
-//   border: 2px solid #fff;
-//   width: 5.5rem;
-//   height: 5.5rem;
-//   border-radius: 100%;
-// }
-
-// &__btn-cta {
-//   width: 100%;
-//   cursor: pointer;
-//   position: absolute;
-// }
-
-// &__btn-arrow {
-//   position: absolute;
-//   bottom: 1rem;
-//   margin-left: 0px;
-//   width: 12px;
-//   height: 12px;
-//   background-size: contain;
-//   top: 15px;
-// }
-
-// &__btn-next {
-//   background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
-// }
-
-// &__btn-segunda {
-//   margin-left: 8px;
-// }

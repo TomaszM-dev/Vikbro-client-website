@@ -6,6 +6,12 @@
     max-width: 114rem;
     margin: 0 auto;
     text-align: start;
+
+    @include respond(iphone) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &__box {
     position: relative;
@@ -15,6 +21,10 @@
     color: $primary-color;
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
     border-radius: 0.5rem;
+    @include respond(iphone) {
+      width: 80%;
+      margin-bottom: 4rem;
+    }
 
     &-image {
       background-color: #262626;
@@ -25,6 +35,10 @@
       opacity: 0.8;
       border-radius: 0.5rem;
       transition: opacity 0.3s;
+
+      @include respond(iphone) {
+        height: 40rem;
+      }
     }
 
     &-image img {

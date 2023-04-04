@@ -4,8 +4,11 @@
 
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
+
+    @include respond(iphone) {
+      margin-top: 10rem;
+    }
   }
   &__logo {
     width: 10rem;
@@ -14,7 +17,6 @@
   &__heading {
     text-transform: uppercase;
     font-size: 3.5rem;
-    // animation: moveInBottom 3s infinite ease;
     animation: moveUp 3s infinite ease-in-out;
   }
 
@@ -25,8 +27,27 @@
     align-items: center;
     justify-content: space-around;
     text-align: center;
+
+    @include respond(phone) {
+      justify-content: space-between;
+    }
+
+    @include respond(iphone) {
+      flex-direction: column;
+    }
   }
   &__items {
+    @include respond(phone) {
+      margin: 0 5rem;
+      &:not(:first-child) {
+        margin-right: 4rem !important;
+      }
+      &:not(:last-child) {
+        margin: 0 5rem;
+        margin-left: 4rem !important;
+      }
+    }
+
     &:not(:first-child) {
       margin-right: 15rem;
     }
@@ -58,6 +79,13 @@
       background-color: inherit;
       color: white;
 
+      @include respond(phone) {
+        width: 100%;
+      }
+
+      @include respond(iphone) {
+        width: 50%;
+      }
       &::placeholder {
         color: white;
       }
@@ -69,6 +97,11 @@
       background-color: inherit;
       color: $color-primary-light-1;
       text-transform: uppercase;
+
+      @include respond(iphone) {
+        width: 50%;
+        align-self: center;
+      }
     }
   }
 
@@ -76,6 +109,10 @@
     span {
       font-size: 1.6rem;
       padding: 0 2rem;
+    }
+
+    @include respond(iphone) {
+      display: none;
     }
   }
 
