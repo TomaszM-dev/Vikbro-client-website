@@ -9,6 +9,8 @@
     &__tab-container {
       display: flex;
       justify-content: center;
+      animation: moveInBottom 0.5s ease-out 0.2s;
+      animation-fill-mode: backwards;
 
       .operations__tab {
         margin: 0 2rem 0 0.8rem;
@@ -45,6 +47,8 @@
     }
 
     &__content {
+      animation: moveInRight 0.5s ease-out;
+      animation-fill-mode: backwards;
       display: none;
       font-size: 2.4rem;
       padding: 2.5rem 7rem 6.5rem 7rem;

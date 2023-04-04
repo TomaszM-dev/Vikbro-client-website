@@ -13,6 +13,7 @@
 
   display: flex;
   justify-content: center;
+  background-color: #3b372d;
 }
 
 .section-achievements {
@@ -22,6 +23,9 @@
   & > * {
     z-index: 11;
   }
+}
+
+.section-operations {
 }
 
 .section {
@@ -38,4 +42,10 @@
 
 .section-work {
   position: relative;
+}
+
+.section-aboutus {
+  padding: 7rem 0 23rem 0;
+  background-color: #3b372d;
+  clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
 }

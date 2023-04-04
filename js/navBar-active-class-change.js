@@ -1,4 +1,4 @@
-"use strict";
+// import { sectionObserver } from "./sectionsObserver";
 
 const navBar = document.querySelector(".navbar");
 const navLink = document.querySelectorAll("navbar__link");
@@ -7,10 +7,13 @@ const btnWork = document.querySelector(".btn-main");
 export const navBarFunctions = function () {
   navBar.addEventListener("click", function (e) {
     e.preventDefault();
-    const clicked = e.target.closest(".link");
+    console.log(e.target);
+    const clicked = e.target.closest(".navbar__link");
     if (!clicked) return;
 
     const linkHash = clicked.getAttribute("href");
+
+    console.log(clicked);
 
     console.log(linkHash);
     document
@@ -21,7 +24,7 @@ export const navBarFunctions = function () {
       t.classList.remove("active");
     });
 
-    clicked.classList.add("active");
+    clicked.classList.toggle("active");
   });
 
   // NAVBAR FROM TRANSPARENT TO BG ON SCROLL

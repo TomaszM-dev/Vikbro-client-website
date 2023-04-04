@@ -15,6 +15,7 @@
     transition: all 1s;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+    animation: scaleClose 1s;
   }
 
   &__open {
@@ -26,9 +27,8 @@
   .scale__open {
     animation: scaleOpen 1s;
   }
-
   .scale__close {
-    opacity: 1;
+    display: none !important;
     transform: translate(-50%, -50%) scale(1);
     animation: scaleClose 1s;
   }
@@ -220,7 +220,7 @@
       box-shadow: 0 1.5rem 4rem rgba($color-black, 0.8);
       border-radius: 1px;
       z-index: 10;
-      transition: all 0.2s;
+      transition: all 0.3s;
       outline-offset: 1.3rem;
       display: block;
 
@@ -250,6 +250,7 @@
       }
 
       &:hover {
+        transition-delay: 0.3s;
         outline: 1rem solid $color-primary-light-1;
         transform: scale(1.05) translateY(-0.5rem);
         box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);

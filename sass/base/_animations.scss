@@ -106,7 +106,7 @@
 @keyframes scaleClose {
   0% {
     opacity: 0;
-    transform: scale(0.25) translate(-10%, -50%);
+    transform: scale(1) translate(-10%, -50%);
   }
 
   50% {
@@ -116,7 +116,7 @@
   100% {
     opacity: 1;
 
-    transform: scale(1) translate(-50%, -50%);
+    transform: scale(0) translate(-50%, -50%);
   }
 }
 
@@ -142,5 +142,15 @@
     opacity: 1;
     transform: scale(1);
     transform: translate(50%, -50%);
+  }
+}
+@keyframes widthScale {
+  0% {
+    // width: 0%;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

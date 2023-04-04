@@ -10,6 +10,7 @@ import "./work.js";
 import { workFunction } from "./work.js";
 import "./testimonialFunction.js";
 import { testimonialFunction } from "./testimonialFunction.js";
+import { typeWriter } from "./typewriter.js";
 
 // INIT FUNCTIONS
 navBarFunctions();
@@ -18,3 +19,4 @@ sectionObserver();
 operationsFunction();
 workFunction();
 testimonialFunction();
+typeWriter();
