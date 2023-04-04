@@ -138,8 +138,8 @@
 
     // dodajemy do tylko clicka
     &__photo-height {
-      height: 90%;
-      width: 80%;
+      height: 90% !important;
+      width: 80% !important;
       animation: moveInBottom 0.5s ease-out 0.5s;
       animation-fill-mode: backwards;
     }
@@ -204,11 +204,19 @@
       }
     }
 
+    &__image {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      display: block;
+      border-radius: 5px;
+    }
     &__photo {
       animation: moveInBottom 0.5s ease-out 0.2s;
       animation-fill-mode: backwards;
-      padding: 9rem 13rem;
-      background-color: aqua;
+      width: 55%;
+
+      height: 70%;
       box-shadow: 0 1.5rem 4rem rgba($color-black, 0.8);
       border-radius: 1px;
       z-index: 10;
@@ -222,26 +230,23 @@
       }
 
       &--p1 {
-        right: 5rem;
-        top: 7rem;
-        background-image: url("/img/work/dom.jpeg");
-        background-size: cover;
+        right: 23rem;
+        top: 0rem;
       }
 
       &--p2 {
-        right: 18rem;
-        top: 12rem;
-        z-index: 11;
-        background-image: url("/img/work/altana.jpeg");
-        background-size: cover;
+        right: 1rem;
+        top: 4rem;
+        object-fit: cover;
       }
 
       &--p3 {
-        right: 28rem;
-        top: 2rem;
-        background-image: url("/img/work/domek2.jpeg");
-        background-size: cover;
-        background-position: center;
+        z-index: 11;
+        height: -webkit-fill-available;
+        height: fit-content;
+        right: 15rem;
+        top: 10rem;
+        object-fit: cover;
       }
 
       &:hover {

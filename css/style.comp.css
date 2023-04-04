@@ -238,77 +238,72 @@ ul {
     background-color: #c2b194;
     color: #fffefb; }
 
-.footer__motto {
-  margin-top: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.footer__logo {
-  width: 10rem;
-  animation: moveDown 3s infinite ease-in-out; }
-
-.footer__heading {
-  text-transform: uppercase;
-  font-size: 3.5rem;
-  animation: moveUp 3s infinite ease-in-out; }
-
-.footer__container {
-  display: flex;
-  font-size: 2rem;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center; }
-
-.footer__items:not(:first-child) {
-  margin-right: 15rem; }
-
-.footer__items:not(:last-child) {
-  margin-left: 15rem; }
-
-.footer__item {
-  margin-bottom: 0.5rem; }
-
-.footer__email {
-  display: flex;
-  flex-direction: column;
-  justify-self: stretch;
-  align-self: stretch; }
-
-.footer__form {
-  display: flex;
-  flex-direction: column; }
-  .footer__form-group {
-    padding: 1rem 0; }
-  .footer__form-input {
-    border: 1px solid white;
-    padding: 1rem 2rem;
-    background-color: inherit;
-    color: white; }
-    .footer__form-input::placeholder {
+.footer {
+  clip-path: polygon(100% 100%, 50% 49%, 0 100%); }
+  .footer__motto {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .footer__logo {
+    width: 10rem;
+    animation: moveDown 3s infinite ease-in-out; }
+  .footer__heading {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    animation: moveUp 3s infinite ease-in-out; }
+  .footer__container {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center; }
+  .footer__items:not(:first-child) {
+    margin-right: 15rem; }
+  .footer__items:not(:last-child) {
+    margin-left: 15rem; }
+  .footer__item {
+    margin-bottom: 0.5rem; }
+  .footer__email {
+    display: flex;
+    flex-direction: column;
+    justify-self: stretch;
+    align-self: stretch; }
+  .footer__form {
+    display: flex;
+    flex-direction: column; }
+    .footer__form-group {
+      padding: 1rem 0; }
+    .footer__form-input {
+      border: 1px solid white;
+      padding: 1rem 2rem;
+      background-color: inherit;
       color: white; }
-  .footer__form-btn {
-    border: 1px solid white;
-    padding: 1rem 3rem;
-    background-color: inherit;
-    color: #c2b194;
-    text-transform: uppercase; }
-
-.footer__privacy span {
-  font-size: 1.6rem;
-  padding: 0 2rem; }
-
-.footer__copyrights {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.3rem;
-  margin: 4rem 5rem; }
+      .footer__form-input::placeholder {
+        color: white; }
+    .footer__form-btn {
+      border: 1px solid white;
+      padding: 1rem 3rem;
+      background-color: inherit;
+      color: #c2b194;
+      text-transform: uppercase; }
+  .footer__privacy span {
+    font-size: 1.6rem;
+    padding: 0 2rem; }
+  .footer__copyrights {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    margin: 4rem 5rem; }
 
 .items {
   display: grid;
   grid-gap: 0.6rem;
   grid-template-columns: repeat(3, 1fr);
-  padding: 3rem; }
+  padding: 3rem;
+  max-width: 150rem;
+  align-items: center;
+  margin: 0 auto; }
 
 .item * {
   z-index: 10; }
@@ -527,7 +522,7 @@ ul {
     font-size: 3rem; }
 
 .section-operations .operations {
-  max-width: 95rem;
+  max-width: 110rem;
   margin: 7rem auto 3rem auto;
   background-color: #6d6556;
   color: #fffefb;
@@ -584,7 +579,7 @@ ul {
 .aboutus__container {
   display: flex;
   justify-content: center;
-  max-width: 100rem;
+  max-width: 114rem;
   margin: 0 auto;
   text-align: start; }
 
@@ -825,8 +820,8 @@ ul {
       animation: moveInBottom 0.5s ease-out 0.5s;
       animation-fill-mode: backwards; }
     .popup .composition__photo-height {
-      height: 90%;
-      width: 80%;
+      height: 90% !important;
+      width: 80% !important;
       animation: moveInBottom 0.5s ease-out 0.5s;
       animation-fill-mode: backwards; }
     .popup .composition__display {
@@ -876,11 +871,17 @@ ul {
       .popup .composition__btn-return:hover {
         background-color: #c2b194;
         color: #fffefb; }
+    .popup .composition__image {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      display: block;
+      border-radius: 5px; }
     .popup .composition__photo {
       animation: moveInBottom 0.5s ease-out 0.2s;
       animation-fill-mode: backwards;
-      padding: 9rem 13rem;
-      background-color: aqua;
+      width: 55%;
+      height: 70%;
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.8);
       border-radius: 1px;
       z-index: 10;
@@ -891,22 +892,19 @@ ul {
         animation: scale 0.5s ease-out 0.2s;
         animation-fill-mode: backwards; }
       .popup .composition__photo--p1 {
-        right: 5rem;
-        top: 7rem;
-        background-image: url("/img/work/dom.jpeg");
-        background-size: cover; }
+        right: 23rem;
+        top: 0rem; }
       .popup .composition__photo--p2 {
-        right: 18rem;
-        top: 12rem;
-        z-index: 11;
-        background-image: url("/img/work/altana.jpeg");
-        background-size: cover; }
+        right: 1rem;
+        top: 4rem;
+        object-fit: cover; }
       .popup .composition__photo--p3 {
-        right: 28rem;
-        top: 2rem;
-        background-image: url("/img/work/domek2.jpeg");
-        background-size: cover;
-        background-position: center; }
+        z-index: 11;
+        height: -webkit-fill-available;
+        height: fit-content;
+        right: 15rem;
+        top: 10rem;
+        object-fit: cover; }
       .popup .composition__photo:hover {
         outline: 1rem solid #c2b194;
         transform: scale(1.05) translateY(-0.5rem);
@@ -926,7 +924,6 @@ ul {
 
 .section-achievements {
   width: 100%;
-  padding: 10rem 0;
   z-index: 10; }
   .section-achievements > * {
     z-index: 11; }
@@ -936,5 +933,9 @@ ul {
 
 .section-footer {
   background-color: #3b372d;
+  clip-path: polygon(50% 0%, 100% 15%, 100% 99%, 0 99%, 0 15%);
   display: flex;
   flex-direction: column; }
+
+.section-work {
+  position: relative; }
